@@ -1,12 +1,11 @@
+%include	/usr/lib/rpm/macros.perl
 %define	pdir	Devel
 %define	pnam	Memo
-%include	/usr/lib/rpm/macros.perl
 Summary:	Devel-Memo perl module
 Summary(pl):	Modu³ perla Devel-Memo
 Name:		perl-Devel-Memo
 Version:	0.004
-Release:	7
-
+Release:	8
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -23,7 +22,7 @@ Devel-Memo - memoize function calls.
 Modu³ perla Devel-Memo.
 
 %prep
-%setup -q -n Devel-Memo-%{version}
+%setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
 perl Makefile.PL
