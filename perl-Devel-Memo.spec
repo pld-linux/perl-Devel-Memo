@@ -42,7 +42,7 @@ u¿ywany jest modu³ FreezeThaw, pomagaj±cy przy buforowaniu.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-perl Makefile.PL
+%{__perl} Makefile.PL
 %{__make}
 
 %install
