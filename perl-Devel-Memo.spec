@@ -3,7 +3,7 @@ Summary:	Devel-Memo perl module
 Summary(pl):	Modu³ perla Devel-Memo
 Name:		perl-Devel-Memo
 Version:	0.004
-Release:	4
+Release:	5
 License:	GPL
 Group:		Development/Languages/Perl
 Group(de):	Entwicklung/Sprachen/Perl
