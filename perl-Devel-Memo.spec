@@ -1,0 +1,54 @@
+%define		perl_sitelib	%(eval "`perl -V:installsitelib`"; echo $installsitelib)
+Summary:	Devel-Memo perl module
+Summary(pl):	Modu³ perla Devel-Memo
+Name:		perl-Devel-Memo
+Version:	0.004
+Release:	3
+Copyright:	GPL
+Group:		Development/Languages/Perl
+Group(pl):	Programowanie/Jêzyki/Perl
+Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/Devel/Devel-Memo-%{version}.tar.gz
+BuildRequires:	perl >= 5.005_03-10
+BuildRequires:	perl-FreezeThaw
+%requires_eq	perl
+Requires:	%{perl_sitearch}
+Requires:	perl-FreezeThaw
+BuildRoot:	/tmp/%{name}-%{version}-root
+
+%description
+Devel-Memo - memoize function calls.
+
+%description -l pl
+Modu³ perla Devel-Memo.
+
+%prep
+%setup -q -n Devel-Memo-%{version}
+
+%build
+perl Makefile.PL
+make
+
+%install
+rm -rf $RPM_BUILD_ROOT
+make install DESTDIR=$RPM_BUILD_ROOT
+
+(
+  cd $RPM_BUILD_ROOT%{perl_sitearch}/auto/Devel/Memo
+  sed -e "s#$RPM_BUILD_ROOT##" .packlist >.packlist.new
+  mv .packlist.new .packlist
+)
+
+gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man3/* \
+        README TODO CHANGES
+
+%clean
+rm -rf $RPM_BUILD_ROOT
+
+%files
+%defattr(644,root,root,755)
+%doc {README,TODO,CHANGES}.gz
+
+%{perl_sitelib}/Devel/Memo.pm
+%{perl_sitearch}/auto/Devel/Memo
+
+%{_mandir}/man3/*
