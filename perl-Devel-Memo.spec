@@ -18,7 +18,7 @@ BuildRequires:	perl >= 5.6
 BuildRequires:	perl-FreezeThaw
 BuildRequires:	perl-Test-Helper
 %endif
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.0.2-104
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
