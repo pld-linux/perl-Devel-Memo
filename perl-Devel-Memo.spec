@@ -1,8 +1,8 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Devel
 %define	pnam	Memo
-Summary:	Devel-Memo perl module
-Summary(pl):	Modu³ perla Devel-Memo
+Summary:	Devel::Memo perl module
+Summary(pl):	Modu³ perla Devel::Memo
 Name:		perl-Devel-Memo
 Version:	0.004
 Release:	8
@@ -16,10 +16,10 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Devel-Memo - memoize function calls.
+Devel::Memo - memoize function calls.
 
 %description -l pl
-Modu³ perla Devel-Memo.
+Modu³ perla Devel::Memo.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
