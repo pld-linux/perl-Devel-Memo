@@ -1,8 +1,8 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Devel
 %define	pnam	Memo
-Summary:	Devel::Memo perl module
-Summary(pl):	Modu³ perla Devel::Memo
+Summary:	Devel::Memo - memoize function calls.
+#Summary(pl):	Devel::Memo
 Name:		perl-Devel-Memo
 Version:	0.004
 Release:	8
@@ -18,8 +18,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Devel::Memo - memoize function calls.
 
-%description -l pl
-Modu³ perla Devel::Memo.
+# %description -l pl
+# TODO
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
@@ -33,13 +33,11 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf README TODO CHANGES
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc README TODO CHANGES
 %{perl_sitelib}/Devel/Memo.pm
 %{_mandir}/man3/*
