@@ -10,7 +10,8 @@ Summary(pl):	Devel::Memo - zapamiêtuj±cy wywo³ania funkcji
 Name:		perl-Devel-Memo
 Version:	0.004
 Release:	11
-License:	GPL/Artistic
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	8bb2fee3416368db795555feee4261a8
