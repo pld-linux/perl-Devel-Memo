@@ -9,7 +9,7 @@ Summary:	Devel::Memo - memoize function calls
 Summary(pl):	Devel::Memo - zapamiêtuj±cy wywo³ania funkcji
 Name:		perl-Devel-Memo
 Version:	0.004
-Release:	10
+Release:	11
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
