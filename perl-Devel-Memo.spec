@@ -9,7 +9,7 @@ Summary:	Devel::Memo - memoize function calls
 Summary(pl):	Devel::Memo - zapamiêtuj±cy wywo³ania funkcji
 Name:		perl-Devel-Memo
 Version:	0.004
-Release:	10
+Release:	11
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -18,7 +18,7 @@ BuildRequires:	perl >= 5.6
 BuildRequires:	perl-FreezeThaw
 BuildRequires:	perl-Test-Helper
 %endif
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -42,7 +42,8 @@ u¿ywany jest modu³ FreezeThaw, pomagaj±cy przy buforowaniu.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor 
 %{__make}
 
 %install
@@ -56,5 +57,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README TODO CHANGES
-%{perl_sitelib}/Devel/Memo.pm
+%{perl_vendorlib}/Devel/Memo.pm
 %{_mandir}/man3/*
