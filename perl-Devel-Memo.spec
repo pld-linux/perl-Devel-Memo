@@ -13,6 +13,7 @@ Release:	11
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	8bb2fee3416368db795555feee4261a8
 BuildRequires:	perl-devel >= 5.6
 %if %{?_with_tests:1}%{!?_with_tests:0}
 BuildRequires:	perl-FreezeThaw
