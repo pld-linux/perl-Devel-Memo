@@ -44,7 +44,7 @@ u¿ywany jest modu³ FreezeThaw, pomagaj±cy przy buforowaniu.
 
 %build
 %{__perl} Makefile.PL \
-	INSTALLDIRS=vendor 
+	INSTALLDIRS=vendor
 %{__make}
 
 %install
