@@ -3,8 +3,8 @@
 %bcond_with	tests	# perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	Devel
-%define	pnam	Memo
+%define		pdir	Devel
+%define		pnam	Memo
 Summary:	Devel::Memo - memoize function calls
 Summary(pl):	Devel::Memo - zapamiêtuj±cy wywo³ania funkcji
 Name:		perl-Devel-Memo
