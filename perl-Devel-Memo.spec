@@ -6,7 +6,7 @@
 %define		pdir	Devel
 %define		pnam	Memo
 Summary:	Devel::Memo - memoize function calls
-Summary(pl):	Devel::Memo - zapamiêtuj±cy wywo³ania funkcji
+Summary(pl.UTF-8):   Devel::Memo - zapamiÄ™tujÄ…cy wywoÅ‚ania funkcji
 Name:		perl-Devel-Memo
 Version:	0.004
 Release:	12
@@ -32,13 +32,13 @@ memoize their arguments and results with each invocation, so that
 unnecessary recomputation is avoided. Internally, the FreezeThaw
 module is used to assist in the caching.
 
-%description -l pl
-Modu³ Devel::Memo umo¿liwia tworzenie obiektów funkcji (czyli
-pob³ogos³awionych code-refs, które mog± byæ przypisane do komórek
-procedur), które s± wywo³ywane dok³adnie tak jak normalne procedury
-(które siê podaje), ale przy ka¿dym wywo³aniu zapamiêtuj± parametry i
-wyniki, zapobiegaj±c niepotrzebnym ponownym obliczeniom. Wewnêtrznie
-u¿ywany jest modu³ FreezeThaw, pomagaj±cy przy buforowaniu.
+%description -l pl.UTF-8
+ModuÅ‚ Devel::Memo umoÅ¼liwia tworzenie obiektÃ³w funkcji (czyli
+pobÅ‚ogosÅ‚awionych code-refs, ktÃ³re mogÄ… byÄ‡ przypisane do komÃ³rek
+procedur), ktÃ³re sÄ… wywoÅ‚ywane dokÅ‚adnie tak jak normalne procedury
+(ktÃ³re siÄ™ podaje), ale przy kaÅ¼dym wywoÅ‚aniu zapamiÄ™tujÄ… parametry i
+wyniki, zapobiegajÄ…c niepotrzebnym ponownym obliczeniom. WewnÄ™trznie
+uÅ¼ywany jest moduÅ‚ FreezeThaw, pomagajÄ…cy przy buforowaniu.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
