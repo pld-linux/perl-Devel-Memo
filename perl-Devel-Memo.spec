@@ -6,7 +6,7 @@
 %define		pdir	Devel
 %define		pnam	Memo
 Summary:	Devel::Memo - memoize function calls
-Summary(pl.UTF-8):   Devel::Memo - zapamiętujący wywołania funkcji
+Summary(pl.UTF-8):	Devel::Memo - zapamiętujący wywołania funkcji
 Name:		perl-Devel-Memo
 Version:	0.004
 Release:	12
