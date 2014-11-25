@@ -1,10 +1,10 @@
 #
 # Conditional build:
 %bcond_with	tests	# perform "make test"
-#
-%include	/usr/lib/rpm/macros.perl
+
 %define		pdir	Devel
 %define		pnam	Memo
+%include	/usr/lib/rpm/macros.perl
 Summary:	Devel::Memo - memoize function calls
 Summary(pl.UTF-8):	Devel::Memo - zapamiętujący wywołania funkcji
 Name:		perl-Devel-Memo
@@ -15,12 +15,13 @@ License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	8bb2fee3416368db795555feee4261a8
+URL:		http://search.cpan.org/dist/Devel-Memo/
 BuildRequires:	perl-devel >= 1:5.8.0
+BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
 BuildRequires:	perl-FreezeThaw
 BuildRequires:	perl-Test-Helper
 %endif
-BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
