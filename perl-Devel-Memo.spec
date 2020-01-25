@@ -4,7 +4,6 @@
 
 %define		pdir	Devel
 %define		pnam	Memo
-%include	/usr/lib/rpm/macros.perl
 Summary:	Devel::Memo - memoize function calls
 Summary(pl.UTF-8):	Devel::Memo - zapamiętujący wywołania funkcji
 Name:		perl-Devel-Memo
